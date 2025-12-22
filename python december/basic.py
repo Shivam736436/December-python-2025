@@ -1,42 +1,131 @@
-# print anything 
-print("Hello, World!")
+# -----------------------------
+# PYTHON BASICS — FULL EXAMPLE
+# -----------------------------
 
-# by default python take input in the form of string
+# This is a comment.
+# Python ignores comments. They are for humans.
 
-# a = input("enter you number :")           // 12
-# b = input("enter you number_2 :")         // 32
-# print("number will be :",a+b)             // output 1232
-
-# ab sahi se number print honge
-
-# a = int(input("enter you number :"))           
-# b = int(input("enter you number_2 :"))  
-# print("number will be :",a+b)
+# ---------
+# PRINTING
+# ---------
+print("Hello, Python!")  
+# print() shows output on the screen
 
 
-# variable = to store data
-name = "John"   # string
-age = 25        # integer
-height = 5.9    # float
-is_married = False  # boolean
+# ----------
+# VARIABLES
+# ----------
+# Variables store data in memory
+
+name = "Alex"      # string (text)
+age = 20           # integer (number)
+height = 5.9       # float (decimal)
+is_student = True  # boolean (True / False)
+
+print(name)
+print(age)
 
 
-# data type = tell us what is it
-# int → whole numbers
-# float → decimals
-# str → text
-# bool → True/False
-# list → [1,2,3]
-# tuple → (1,2,3) immutable
-# dict → {"key": "value"}
+# ----------------
+# USER INPUT
+# ----------------
+# input() always returns a STRING
 
-# operator
-# Arithmetic
-a = 10
-b = 3
-print(a + b)  # 13
-print(a - b)  # 7
-print(a * b)  # 30
-print(a / b)  # 3.333
-print(a % b)  # 1 (modulus)
-print(a ** b) # 1000 (exponent)
+user_name = input("Enter your name: ")
+print("Hello", user_name)
+
+
+# ----------------
+# TYPE CONVERSION
+# ----------------
+# Convert string to integer using int()
+
+user_age = int(input("Enter your age: "))
+print("Next year you will be", user_age + 1)
+
+
+# ----------------
+# IF / ELSE
+# ----------------
+# Used for decision making
+
+if user_age >= 18:
+    print("You are an adult")
+else:
+    print("You are a minor")
+
+# Indentation (spaces) is VERY important in Python
+
+
+# ----------------
+# LOOPS
+# ----------------
+
+# FOR LOOP
+for i in range(5):   # range(5) means 0 to 4
+    print("For loop value:", i)
+
+# WHILE LOOP
+count = 0
+while count < 3:
+    print("While loop value:", count)
+    count += 1      # same as count = count + 1
+
+
+# ----------------
+# FUNCTIONS
+# ----------------
+# Functions are reusable blocks of code
+
+def greet(person):
+    # This function takes one parameter: person
+    return "Hello " + person
+
+# Call the function
+message = greet("Alex")
+print(message)
+
+
+# ----------------
+# FUNCTION WITH MATH
+# ----------------
+def add(a, b):
+    return a + b
+
+result = add(10, 5)
+print("Sum is:", result)
+
+
+# ----------------
+# LISTS
+# ----------------
+# Lists store multiple values
+
+numbers = [1, 2, 3, 4, 5]
+print(numbers)
+print(numbers[0])   # first element (index starts at 0)
+
+# Loop through a list
+for num in numbers:
+    print("Number:", num)
+
+
+# ----------------
+# DICTIONARIES
+# ----------------
+# Key-value pairs
+
+student = {
+    "name": "Alex",
+    "age": 20,
+    "is_student": True
+}
+
+print(student["name"])
+print(student["age"])
+
+
+# ----------------
+# FINAL MESSAGE
+# ----------------
+print("You just learned the core of Python 🎉")
